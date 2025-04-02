@@ -1,0 +1,41 @@
+Project knowledge base:
+
+I'm starting a new project and I'd like to create a knowledge base for you to reference throughout our development process.
+The project is going to be used for managing members in a charity organisation, that is run by volounteers.
+We will be using three tier application setup:
+- a static TypeScript frontend with Gatsby or React, including TailwindCSS
+- a backend for frontend to deliver data to the frontend, written in TypeScript and NodeJS as a runner
+- a backend set of services, grouped by their domain in a bounded context, written in golang for performance and small memory footprint reasons
+The key features we need to implement are:
+- manage the membership data of their charity
+- manage recurring membership payments
+- manage fulfillment of the support projects and smaller demands
+- occasionaly send emails to their members
+- data retention and compliance reporting must adhere to GDPR regulations, keeping all active memberships records available as long it is required, whilst archiving inactive members after 30 days and deleting inactive records after 10 years retention
+Some important constraints to keep in mind are:
+- code needs to be modular and allow adding further capabilities and requirements with ease
+- all backend services need to be capable of running as a rootless docker containers
+- frontend UI should be following best-practices for readability and usability on different devices
+- frontend UI must adheere to accessability guidelines and include tools to test and report it
+- frontend UI must support internationalisation
+- frontend and backend components must support authentication and authorisation with a AWS Cognito services
+- frontend should be capable of caching data locally in case of connectivity issues and be able to synchronise one online
+- AWS SES should be used for email services
+- There will be no integration with externals payment processors
+- backend services must use HTTP error codes to report their success and error states, with error states containing extra message to explain what failed
+- DynamoDB should be used as a database persistance layer
+- data model should follow best practices in designing document based databases
+In terms of coding style, we prefer:
+- test driven development, we expect to every functionality to have a full set of unit testing first and then include to code to pass this test
+- for all testing frameworks, we expect to test happy path, error cases, edge cases and boundary value analysis
+- all application modules shall be built with a decoupled architecture design, allowing backend components or database backends to be changed without impacting the code
+- all code should be documented inline with docstrings
+- API should be created on the RESTful API standard and documented OpenAPI v3 specs, including a documentation browser built in
+- all backend code should implement best practices in observability, having logging, monitoring and metrices (technical and busuiness process) built-in
+- GitHub Actions should be used for CI/CD
+- security must be built in the code, with security scanning and static analysis tools incorporated in the CI pipeline
+- we favour trunk based development and use semver to manage releases
+- continuous delivery is being practiced in all components
+- pair programing technique is used for the code review process
+- contribution guideline should contain this knowledge base to support the onboarding process
+Can you summarize this information and suggest any additional details we should include in our knowledge base?

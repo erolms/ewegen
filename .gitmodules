@@ -1,0 +1,3 @@
+[submodule "ewegen-frontend"]
+	path = ewegen-frontend
+	url = git@github.com:erolms/ewegen-frontend.git

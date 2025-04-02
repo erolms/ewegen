@@ -4,6 +4,7 @@
 ## Development Tools by Layer
 
 ### Frontend (React/Gatsby with TypeScript)
+
 ```bash
 # Install NVM for Node version management
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -24,6 +25,7 @@ npm install --save-dev jest @testing-library/react @testing-library/jest-dom @te
 ```
 
 ### BFF Layer (TypeScript/Node.js)
+
 ```bash
 # Create TypeScript Node.js project
 mkdir charity-bff
@@ -40,6 +42,7 @@ npm install --save-dev jest ts-jest @types/jest supertest @types/supertest
 ```
 
 ### Backend Services (Golang)
+
 ```bash
 # Install Go
 brew install go
@@ -58,6 +61,7 @@ go get -u github.com/stretchr/testify
 ```
 
 ### Infrastructure
+
 ```bash
 # Install AWS CLI and configure
 brew install awscli
@@ -171,6 +175,7 @@ services:
 ## Key Choices Explained
 
 ### Frontend Testing Stack
+
 - **Jest**: Industry standard for JavaScript testing
 - **React Testing Library**: Encourages testing behavior over implementation
 - **MSW (Mock Service Worker)**: API mocking that works with all requests
@@ -180,6 +185,7 @@ services:
 **Cons**: Initial setup complexity, multiple tools to learn
 
 ### Backend Testing Approach
+
 - **Go**: Built-in testing package + testify for assertions
 - **Node.js**: Jest for unit tests, Supertest for API testing
 
@@ -187,6 +193,7 @@ services:
 **Cons**: Different approaches per language stack
 
 ### Auth Development
+
 - **LocalStack**: Simulates AWS services locally
 - **Shared auth library**: Cross-platform consistency
 
@@ -194,6 +201,7 @@ services:
 **Cons**: Some divergence from actual AWS behavior
 
 ### DynamoDB Access
+
 - **Local DynamoDB**: Via LocalStack
 - **NoSQL Workbench**: For data modeling and visualization
 
@@ -203,6 +211,7 @@ services:
 ## Getting Started
 
 1. Set up the frontend:
+
 ```bash
 cd frontend
 npm install
@@ -210,6 +219,7 @@ npm run develop
 ```
 
 2. Set up the BFF:
+
 ```bash
 cd bff
 npm install
@@ -217,6 +227,7 @@ npm run dev
 ```
 
 3. Set up the Golang services:
+
 ```bash
 cd services/membership
 go mod download
@@ -224,6 +235,7 @@ go run main.go
 ```
 
 4. Run the entire stack with Docker Compose:
+
 ```bash
 docker-compose up
 ```

@@ -8,7 +8,8 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 1: Foundation and Infrastructure (Months 1-2)
 
-#### Components:
+#### Components
+
 - **Core Infrastructure Setup**
   - AWS account setup and configuration
   - Authentication framework (AWS Cognito)
@@ -16,16 +17,19 @@ This roadmap outlines the development plan for the Charity Management System, a 
   - Docker container configurations
   - Development environment setup
 
-#### Milestones:
+#### Milestones
+
 - ✅ AWS infrastructure provisioned
 - ✅ CI/CD pipeline operational
 - ✅ Local development environment documented
 - ✅ Authentication system proof-of-concept
 
-#### Dependencies:
+#### Dependencies
+
 - None (starting point)
 
-#### Proof of Concept:
+#### Proof of Concept
+
 - Simple authenticated API endpoint
 - Basic Docker container deployment
 
@@ -33,7 +37,8 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 2: Data Layer and Core Services (Months 2-4)
 
-#### Components:
+#### Components
+
 - **Data Layer**
   - DynamoDB schema design
   - Core data models (Members, Projects, Payments)
@@ -45,16 +50,19 @@ This roadmap outlines the development plan for the Charity Management System, a 
   - API Gateway/BFF Layer (TypeScript/Node.js)
   - Observability Framework
 
-#### Milestones:
+#### Milestones
+
 - ✅ Data schema finalized
 - ✅ Core API endpoints operational
 - ✅ Basic CRUD operations for members
 - ✅ Logging and monitoring in place
 
-#### Dependencies:
+#### Dependencies
+
 - Requires Core Infrastructure (Phase 1)
 
-#### Proof of Concept:
+#### Proof of Concept
+
 - End-to-end API test for member creation and retrieval
 - Demonstration of GDPR-compliant data storage
 
@@ -62,7 +70,8 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 3: Frontend Foundation (Months 4-6)
 
-#### Components:
+#### Components
+
 - **Frontend Core**
   - Project setup (React/Gatsby + TailwindCSS)
   - UI Component Library
@@ -70,17 +79,20 @@ This roadmap outlines the development plan for the Charity Management System, a 
   - Internationalization framework
   - Basic responsive layouts
 
-#### Milestones:
+#### Milestones
+
 - ✅ Frontend architecture established
 - ✅ User authentication flow working
 - ✅ Core UI components created
 - ✅ Internationalization framework tested
 
-#### Dependencies:
+#### Dependencies
+
 - Requires Authentication (Phase 1)
 - Requires API Gateway/BFF (Phase 2)
 
-#### Proof of Concept:
+#### Proof of Concept
+
 - Member login and profile viewing
 - Language switching capability
 
@@ -88,7 +100,8 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 4: Member Management (Months 6-8)
 
-#### Components:
+#### Components
+
 - **Member Management Features**
   - Member registration flow
   - Member profile management
@@ -96,13 +109,15 @@ This roadmap outlines the development plan for the Charity Management System, a 
   - Membership status tracking
   - Offline data capabilities
 
-#### Milestones:
+#### Milestones
+
 - ✅ Complete member management UI
 - ✅ Member data synchronization
 - ✅ Member status workflows
 - ✅ First end-to-end user journeys
 
-#### Dependencies:
+#### Dependencies
+
 - Requires Frontend Foundation (Phase 3)
 - Requires Member Management Service (Phase 2)
 
@@ -110,22 +125,26 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 5: Payment System (Months 8-10)
 
-#### Components:
+#### Components
+
 - **Payment Processing**
   - Payment Management Service (Golang)
   - Recurring Payment Scheduler
   - Payment tracking and reporting
   - Payment history views
 
-#### Milestones:
+#### Milestones
+
 - ✅ Payment processing workflows
 - ✅ Recurring payment setup
 - ✅ Payment reporting dashboards
 
-#### Dependencies:
+#### Dependencies
+
 - Requires Member Management (Phase 4)
 
-#### Proof of Concept:
+#### Proof of Concept
+
 - End-to-end payment processing demonstration
 - Recurring payment lifecycle test
 
@@ -133,19 +152,22 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 6: Project Management (Months 10-12)
 
-#### Components:
+#### Components
+
 - **Project Tracking**
   - Project Management Service (Golang)
   - Project creation and assignment
   - Fulfillment tracking
   - Project reporting
 
-#### Milestones:
+#### Milestones
+
 - ✅ Project creation and management
 - ✅ Project assignment to members
 - ✅ Fulfillment tracking dashboard
 
-#### Dependencies:
+#### Dependencies
+
 - Requires Member Management (Phase 4)
 - Can parallel with Payment System (Phase 5)
 
@@ -153,23 +175,27 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 7: Communication System (Months 12-14)
 
-#### Components:
+#### Components
+
 - **Communication**
   - Email Service integration (AWS SES)
   - Notification templates
   - Communication preferences
   - Scheduled communications
 
-#### Milestones:
+#### Milestones
+
 - ✅ Email templates created
 - ✅ Notification system operational
 - ✅ Communication preferences management
 
-#### Dependencies:
+#### Dependencies
+
 - Requires Member Management (Phase 4)
 - Can parallel with Project Management (Phase 6)
 
-#### Proof of Concept:
+#### Proof of Concept
+
 - Email notification flow demonstration
 - Bulk communication capability
 
@@ -177,7 +203,8 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 ### Phase 8: Advanced Features and Compliance (Months 14-16)
 
-#### Components:
+#### Components
+
 - **Reporting & Compliance**
   - Analytics Dashboard
   - GDPR Reporting Tools
@@ -189,20 +216,23 @@ This roadmap outlines the development plan for the Charity Management System, a 
   - Conflict resolution
   - Offline mode improvements
 
-#### Milestones:
+#### Milestones
+
 - ✅ Compliance reporting dashboard
 - ✅ Data archiving and retention policies implemented
 - ✅ Full offline capability tested
 - ✅ System performance optimization
 
-#### Dependencies:
+#### Dependencies
+
 - Requires all previous phases
 
 ---
 
 ### Phase 9: Testing, Documentation and Launch (Months 16-18)
 
-#### Components:
+#### Components
+
 - **Testing**
   - End-to-end testing
   - Performance testing
@@ -215,13 +245,15 @@ This roadmap outlines the development plan for the Charity Management System, a 
   - API documentation
   - Operational runbooks
 
-#### Milestones:
+#### Milestones
+
 - ✅ Testing completed
 - ✅ Documentation finalized
 - ✅ User training materials created
 - ✅ Production deployment
 
-#### Dependencies:
+#### Dependencies
+
 - Requires all previous phases
 
 ## Critical Path Dependencies

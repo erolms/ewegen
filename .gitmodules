@@ -4,3 +4,6 @@
 [submodule "ewegen-bff"]
 	path = ewegen-bff
 	url = git@github.com:erolms/ewegen-bff.git
+[submodule "services/ewegen-membership"]
+	path = services/ewegen-membership
+	url = git@github.com:erolms/ewegen-membership.git

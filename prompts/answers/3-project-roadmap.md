@@ -1,8 +1,8 @@
-# Charity Management System Project Roadmap
+# eWegen Project Roadmap
 
 ## Overview
 
-This roadmap outlines the development plan for the Charity Management System, a three-tier application designed to help volunteers manage their charity organization. The project will be developed in phases, with each phase focusing on specific components and capabilities.
+This roadmap outlines the development plan for eWegen (Ehrenamtswegen - Mitglieder Management Plattform), a three-tier application designed to help volunteers manage their charity organization. The project will be developed in phases, with each phase focusing on specific components and capabilities.
 
 ## Development Phases
 
@@ -32,6 +32,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 - Simple authenticated API endpoint
 - Basic Docker container deployment
+
+#### Reasoning
+
+Infrastructure and authentication are foundational elements that impact all other components. Starting here allows us to establish the security model early and create a stable deployment pipeline, reducing integration issues later. The authentication system is particularly critical as it affects both frontend and backend components, making it a logical starting point.
 
 ---
 
@@ -66,6 +70,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 - End-to-end API test for member creation and retrieval
 - Demonstration of GDPR-compliant data storage
 
+#### Reasoning
+
+Data architecture is the backbone of the application and impacts all feature development. Building core backend services early creates a foundation for all subsequent business logic. The Member Management Service is prioritized first because members are the central entity that other features (payments, projects, communications) depend on. Starting with the data layer also forces early consideration of GDPR compliance requirements.
+
 ---
 
 ### Phase 3: Frontend Foundation (Months 4-6)
@@ -96,6 +104,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 - Member login and profile viewing
 - Language switching capability
 
+#### Reasoning
+
+After establishing the backend foundation, creating the frontend foundation allows for end-to-end testing of core workflows. Building a UI component library early ensures consistent design and accelerates later feature development. Internationalization is addressed early because retrofitting it later would require significant rework. This phase creates the scaffolding that all future UI features will build upon.
+
 ---
 
 ### Phase 4: Member Management (Months 6-8)
@@ -120,6 +132,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 - Requires Frontend Foundation (Phase 3)
 - Requires Member Management Service (Phase 2)
+
+#### Reasoning
+
+Member management represents the core business functionality and the foundation for other features. By completing this module first, we deliver immediate value to users while establishing patterns for other features. The offline capabilities built here will inform how we handle offline mode for other features. This phase produces a minimally viable product that delivers real value even without the other planned features.
 
 ---
 
@@ -148,6 +164,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 - End-to-end payment processing demonstration
 - Recurring payment lifecycle test
 
+#### Reasoning
+
+Payments are a critical revenue function for the charity and build directly on member management. This module involves complex business logic and financial data, making it higher risk than some other features. Implementing it after the core member functionality allows us to focus on the financial accuracy and security aspects without being distracted by more basic functionality concerns.
+
 ---
 
 ### Phase 6: Project Management (Months 10-12)
@@ -170,6 +190,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 - Requires Member Management (Phase 4)
 - Can parallel with Payment System (Phase 5)
+
+#### Reasoning
+
+Project management is a core operational function that depends on member data but is independent of the payment system. We schedule it after payments because financial systems typically have higher priority for charities. However, it can be developed in parallel with the payment system if resources allow. This module enables the charity to track its actual support activities, completing the core business functionality triad (members, payments, projects).
 
 ---
 
@@ -199,6 +223,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 - Email notification flow demonstration
 - Bulk communication capability
 
+#### Reasoning
+
+The communication system enhances the core functionality rather than being essential to basic operations. It's placed later in the roadmap because it depends on having member data but doesn't block other core features. Email configuration and template design are relatively independent tasks that can be developed in parallel with other features. This module completes the outreach capabilities of the system.
+
 ---
 
 ### Phase 8: Advanced Features and Compliance (Months 14-16)
@@ -226,6 +254,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 #### Dependencies
 
 - Requires all previous phases
+
+#### Reasoning
+
+Advanced features are scheduled after core functionality is complete because they enhance rather than define the system. GDPR compliance mechanisms were considered from the beginning, but comprehensive reporting tools are best implemented once all data-generating features are in place. Similarly, advanced offline capabilities build upon the basic offline functionality established earlier. This phase focuses on polishing the system and ensuring regulatory compliance.
 
 ---
 
@@ -256,6 +288,10 @@ This roadmap outlines the development plan for the Charity Management System, a 
 
 - Requires all previous phases
 
+#### Reasoning
+
+While testing occurs throughout development, comprehensive system testing is scheduled as a dedicated phase before launch to ensure all components work together as expected. Documentation is consolidated at this stage to ensure it accurately reflects the final system. This phase represents the final quality gate before full production deployment and focuses on ensuring the system is robust, well-documented, and ready for handover to operational teams.
+
 ## Critical Path Dependencies
 
 The following dependencies represent the critical path for the project:
@@ -275,4 +311,4 @@ The following components can be developed in parallel to accelerate the timeline
 - Early proof-of-concepts for high-risk areas (authentication, offline capabilities, payment processing)
 - Regular user feedback sessions after each phase
 - Performance testing integrated throughout development
-- Security review at the end of each major phase 
+- Security review at the end of each major phase

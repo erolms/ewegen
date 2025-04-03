@@ -4,6 +4,7 @@
 ## 1. Main Functionalities
 
 The authentication component needs to support:
+
 - User registration and sign-up flows
 - Authentication (login/logout)
 - Password management (reset, change)
@@ -38,7 +39,7 @@ The authentication component needs to support:
 
 ## 4. Component Interactions
 
-```
+```d2
 Frontend ↔ BFF Layer ↔ Cognito
   ↓           ↓
 UI Context    Auth Middleware

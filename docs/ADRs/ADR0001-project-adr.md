@@ -1,12 +1,13 @@
-# ADR0001 - Architectural Decision Record: Charity Management System
+# ADR0001 - Architectural Decision Record: eWegen (Ehrenamtswegen)
 
 ## Context
 
-Our organization aims to develop a comprehensive management system for a charity organization run by volunteers. The system needs to handle membership data, recurring payments, project fulfillment, and communication with members, while ensuring compliance with GDPR regulations. Given the volunteer-based nature of the organization, the system must be reliable, easy to maintain, and cost-effective.
+Our organization aims to develop a comprehensive management system for a charity organization run by volunteers. The system, named eWegen (Ehrenamtswegen - Mitglieder Management Plattform), needs to handle membership data, recurring payments, project fulfillment, and communication with members, while ensuring compliance with GDPR regulations. Given the volunteer-based nature of the organization, the system must be reliable, easy to maintain, and cost-effective.
 
 ## Problem Statement
 
 We need a technical solution that enables:
+
 - Efficient management of membership data and recurring payments
 - Fulfillment tracking of support projects
 - Secure member communication
@@ -19,19 +20,23 @@ We need a technical solution that enables:
 ## Options Considered
 
 ### Option 1: Monolithic Application
+
 - **Pros**: Simpler deployment, integrated codebase, potentially easier to maintain by small team
 - **Cons**: Less scalable, harder to extend, technology constraints, difficult to distribute work
 
 ### Option 2: Two-Tier Architecture (Frontend + Backend)
+
 - **Pros**: Clearer separation of concerns, better scalability than monolith
 - **Cons**: Less domain separation, limited optimization for different services
 
 ### Option 3: Three-Tier Architecture with Domain-Specific Services
+
 - **Pros**: Clear separation of concerns, optimized technology per domain, high scalability, distributed development
 - **Cons**: More complex deployment, requires stronger DevOps practices, higher initial development time
 
 ### Database Options
-1. **Relational Database (PostgreSQL, MySQL)** 
+
+1. **Relational Database (PostgreSQL, MySQL)**
    - **Pros**: Mature, strong consistency, powerful queries
    - **Cons**: Less scalable, potentially higher hosting costs
 
@@ -41,7 +46,7 @@ We need a technical solution that enables:
 
 ## Decision
 
-We have decided to implement a three-tier architecture with domain-specific services:
+We have decided to implement a three-tier architecture with domain-specific services for eWegen:
 
 1. **Frontend**:
    - Static TypeScript application using React/Gatsby
@@ -81,55 +86,64 @@ We have decided to implement a three-tier architecture with domain-specific serv
 ## Non-Functional Requirements & Technical Debt Backlog
 
 ### Performance
+
 - [ ] Define performance metrics and SLAs for each service
 - [ ] Implement performance testing framework and benchmarks
 - [ ] Establish caching strategies at multiple levels
 - [ ] Create load testing scenarios for critical paths
 
 ### Reliability
+
 - [ ] Design disaster recovery procedures and backup strategy
 - [ ] Establish incident response protocol
 - [ ] Define SLOs (Service Level Objectives) for each critical service
 - [ ] Implement health check endpoints for all services
 
 ### Security
+
 - [ ] Conduct regular security audits and penetration testing
 - [ ] Implement rate limiting and DDoS protection
 - [ ] Establish secure data transit and at-rest encryption standards
 - [ ] Create security incident response plan
 
 ### Maintainability
+
 - [ ] Define code quality metrics and thresholds
 - [ ] Create comprehensive technical documentation
 - [ ] Implement automated dependency updates and security patches
 - [ ] Establish technical debt management process
 
 ### Scalability
+
 - [ ] Design horizontal scaling capabilities for services
 - [ ] Implement database sharding strategy for future growth
 - [ ] Establish monitoring for resource utilization trends
 - [ ] Create capacity planning process
 
 ### Development Experience
+
 - [ ] Create streamlined local development environment
 - [ ] Establish consistent environment configuration management
 - [ ] Document onboarding process for new developers
 - [ ] Implement developer productivity tooling
 
 ### Quality Assurance
+
 - [ ] Define browser/device compatibility requirements
 - [ ] Establish accessibility testing procedures and tools
 - [ ] Implement automated E2E testing framework
 - [ ] Create regression testing strategy
 
 ### DevOps
+
 - [ ] Design blue/green deployment strategy
 - [ ] Implement canary releases for high-risk changes
 - [ ] Establish monitoring alert thresholds
 - [ ] Create runbooks for common operational tasks
 
 ### Documentation
+
 - [ ] Maintain living documentation for APIs
 - [ ] Create user journey documentation
 - [ ] Establish data model documentation
-- [ ] Document system integration points 
+- [ ] Document system integration points

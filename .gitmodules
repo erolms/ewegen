@@ -7,3 +7,12 @@
 [submodule "services/ewegen-membership"]
 	path = services/ewegen-membership
 	url = git@github.com:erolms/ewegen-membership.git
+[submodule "services/ewegen-payments"]
+	path = services/ewegen-payments
+	url = git@github.com:erolms/ewegen-payments.git
+[submodule "services/ewegen-projects"]
+	path = services/ewegen-projects
+	url = git@github.com:erolms/ewegen-projects.git
+[submodule "services/ewegen-communications"]
+	path = services/ewegen-communications
+	url = git@github.com:erolms/ewegen-communications.git

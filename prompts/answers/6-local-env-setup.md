@@ -76,50 +76,50 @@ docker pull localstack/localstack
 
 ## Folder Structure
 
-```
-charity-system/
-├── frontend/                # Gatsby/React frontend
+```text
+ewegen/
+├── ewegen-frontend/                # Gatsby/React frontend
 │   ├── src/
-│   │   ├── components/      # Reusable UI components
-│   │   ├── pages/           # Gatsby pages
-│   │   ├── context/         # React context incl. auth
-│   │   ├── hooks/           # Custom hooks
-│   │   ├── services/        # API services
-│   │   ├── utils/           # Utility functions
-│   │   └── styles/          # Global styles
-│   └── tests/               # Frontend tests
+│   │   ├── components/             # Reusable UI components
+│   │   ├── pages/                  # Gatsby pages
+│   │   ├── context/                # React context incl. auth
+│   │   ├── hooks/                  # Custom hooks
+│   │   ├── services/               # API services
+│   │   ├── utils/                  # Utility functions
+│   │   └── styles/                 # Global styles
+│   └── tests/                      # Frontend tests
 │
-├── bff/                     # Backend for Frontend
+├── ewegen-bff/                     # Backend for Frontend
 │   ├── src/
-│   │   ├── config/          # Configuration
-│   │   ├── controllers/     # Route controllers
-│   │   ├── middlewares/     # Express middlewares
-│   │   ├── routes/          # API routes
-│   │   ├── services/        # Business logic
-│   │   ├── utils/           # Utilities
-│   │   └── types/           # TypeScript types
-│   └── tests/               # BFF tests
+│   │   ├── config/                 # Configuration
+│   │   ├── controllers/            # Route controllers
+│   │   ├── middlewares/            # Express middlewares
+│   │   ├── routes/                 # API routes
+│   │   ├── services/               # Business logic
+│   │   ├── utils/                  # Utilities
+│   │   └── types/                  # TypeScript types
+│   └── tests/                      # BFF tests
 │
-├── services/                # Golang microservices
-│   ├── membership/          # Member management
-│   ├── payments/            # Payment processing
-│   ├── projects/            # Project management
-│   └── communications/      # Email/notifications
+├── services/                       # Golang microservices
+│   ├── ewegen-membership/          # Member management
+│   ├── ewegen-payments/            # Payment processing
+│   ├── ewegen-projects/            # Project management
+│   └── ewegen-communications/      # Email/notifications
 │
-├── shared/                  # Shared code
-│   ├── auth/                # Auth library (TypeScript)
-│   └── models/              # Shared data models
+├── shared/                         # Shared code
+│   ├── auth/                       # Auth library (TypeScript)
+│   └── models/                     # Shared data models
 │
-├── infrastructure/          # Infrastructure setup
-│   ├── docker/              # Docker configuration
-│   ├── aws/                 # AWS configuration
-│   └── local/               # Local development
+├── infrastructure/                 # Infrastructure setup
+│   ├── docker/                     # Docker configuration
+│   ├── aws/                        # AWS configuration
+│   └── local/                      # Local development
 │
-├── docs/                    # Documentation
-│   ├── ADRs/                # Architecture Decision Records
-│   └── api/                 # API documentation
+├── docs/                           # Documentation
+│   ├── ADRs/                       # Architecture Decision Records
+│   └── api/                        # API documentation
 │
-└── scripts/                 # Development scripts
+└── scripts/                        # Development scripts
 ```
 
 ## Docker Compose Setup

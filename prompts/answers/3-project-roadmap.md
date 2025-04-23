@@ -20,8 +20,8 @@ This roadmap outlines the development plan for eWegen (Ehrenamtswegen - Mitglied
 #### Milestones
 
 - ✅ AWS infrastructure provisioned
-- ✅ CI/CD pipeline operational
-- ✅ Local development environment documented
+- ✅ CI/CD pipeline operational - done
+- ✅ Local development environment documented - done
 - ✅ Authentication system proof-of-concept
 
 #### Dependencies
